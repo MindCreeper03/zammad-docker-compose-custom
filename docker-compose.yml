@@ -112,7 +112,9 @@ services:
   zammad-websocket:
     <<: *zammad-service
     command: ["zammad-websocket"]
-
+networks:
+  default:
+    driver: bridge
 volumes:
   elasticsearch-data:
     driver: local
